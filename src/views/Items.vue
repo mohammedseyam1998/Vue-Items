@@ -30,7 +30,7 @@
             </div>
             <div class="col-3">
              
-              <button @click="removeFave(product)"  type="button" class="btn btn-danger mb-2">Delete</button>
+              <button @click="remove(product)"  type="button" class="btn btn-danger mb-2">Delete</button>
               <button type="button" class="btn btn-primary">Action</button>
             </div>
           </div>
@@ -67,37 +67,6 @@
                     </div>
     </div>
   </section> 
-       <!-- <Carousel :value="products" :numVisible="4" :numScroll="3" :responsiveOptions="responsiveOptions">
-	<template #item="slotProps">
-		<div class="car-details">
-			<div class="p-grid p-nogutter" style="position: relative;">
-				<div class="p-col-12" style="min-height: 66px;">
-          <img :src="slotProps.data.brand" alt="kljhbh">
-          <i  @click="updateCart(product)" class="far fa-heart discount"> </i>
-          <i class="fas fa-eye fa-lg showpass-icon"></i>
-					
-				</div>
-				<div class="p-col-12 ">
-                       <div class="item">
-
-                        <p class="mt-2" style="color: #3927ca;font-weight: bold;" >{{slotProps.data.name}}</p>
-                        <ul class="list-unstyled slider-eval" style="padding: 0;">
-                        <li class="active"><i class="fas fa-star" style="font-size: 18px;"></i></li>
-                        <li class="active"><i class="fas fa-star" style="font-size: 18px;"></i></li>
-                        <li class="active"><i class="fas fa-star" style="font-size: 18px;"></i></li>
-                        <li class="active"><i class="fas fa-star" style="font-size: 18px;"></i></li>
-                        <li><i class="fas fa-star" style="font-size: 18px;"></i></li>
-
-                        </ul>
-                        <p class="price">{{slotProps.data.description}}</p>
-                        <div class="progress-bar"><span class="fill-color"></span></div>
-                        <span class="sold">sold:10</span>
-                    </div>
-				</div>
-			</div>
-		</div>
-	</template>
-</Carousel> -->
     </div>
 </template>
 <script>
@@ -164,7 +133,7 @@ methods:{
            
         }
         },
-      removeFave(product) {
+      remove(product) {
       swal("Are you sure to delete this item?", {
       buttons: ["No", "Yes"],
       }).then(willDelete => {
